@@ -214,6 +214,7 @@ main(int argc, char **argv)
 			}
 			newtl->timestamp = timeval2ulong(&tv);
 			traceline_print_one(stdout, newtl);
+			traceline_print_one(stderr, newtl);
 			
 			if(!((recpacket->flags & STREAMER_MASK_TWONALUS) ^ STREAMER_NALU_TWONALUS))
 			{ /* Received packet contains two NAL units */
